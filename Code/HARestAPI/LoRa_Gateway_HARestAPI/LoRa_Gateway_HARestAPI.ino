@@ -1,6 +1,7 @@
 #include "board.h"
 #include <SPI.h>
 #include <LoRa.h>
+#include <WiFi.h>
 #include <WiFiClient.h>
 #include <HARestAPI.h>          // https://github.com/debsahu/HARestAPI
 #include "SSD1306Wire.h"
@@ -14,17 +15,17 @@ SSD1306Wire display(OLED_ADDRESS, OLED_SDA, OLED_SCL);
 #define SyncWord 0xF3
 #define PreambleLength 8
 #define TxPower 20
-float BAND = 868E6; // 433E6 / 868E6 / 915E6 /
+float BAND = 915E6; // 433E6 / 868E6 / 915E6 /
 
-const char *ssid = "Your_WIFI_SSID";
-const char *password = "Your_WIFI_password";
-const char* ha_ip = "homeassistant.local";
+const char *ssid = "Frey-IoT-Legacy";
+const char *password = "iot#6108101649$";
+const char* ha_ip = "192.168.30.242";
 uint16_t ha_port = 8123;
-const char* ha_pwd = "HA_PASSWORD";
+const char* ha_pwd = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0NTk0Mzg0OWNhMjQ0ZjFiOTk1NTYzN2JiY2QwOThlMCIsImlhdCI6MTcyMjg4NjY4MiwiZXhwIjoyMDM4MjQ2NjgyfQ.kel7DUvfwrUi15WTih71KyVaiZV_-orJ-CElz2dPip4";
 String fingerprint = "35 85 74 EF 67 35 A7 CE 40 69 50 F3 C0 F6 80 CF 80 3B 2E 19";
 
-String NewMailCode = "REPLACE_WITH_NEW_MAIL_CODE"; // For Example "0xA2B2";
-String LowBatteryCode = "REPLACE_WITH_LOW_BATTERY_CODE"; // For Example "0xLBAT";
+String NewMailCode = "0xA2B2"; // For Example "0xA2B2";
+String LowBatteryCode = "0xLBAT"; // For Example "0xLBAT";
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

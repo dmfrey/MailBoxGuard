@@ -6,11 +6,11 @@
 
 ////////////////////////////// WIFI / MQTT ////////////////////////////////////
 
-#define WIFI_SSID "xxxx"
-#define WIFI_PASSWORD "xxxx"
-#define MQTT_USERNAME "xxxx"
-#define MQTT_PASSWORD "xxxx"
-#define MQTT_SERVER "xxxx"
+#define WIFI_SSID "Frey-IoT"
+#define WIFI_PASSWORD "iot#6108101649$"
+#define MQTT_USERNAME "homeassistant-mqtt-user"
+#define MQTT_PASSWORD "156a8cbbc1934f6b8d7cc0e6f6bdcf7a"
+#define MQTT_SERVER "192.168.31.247"
 #define MQTT_PORT 1883
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -36,6 +36,6 @@
 #define SYNC_WORD 0xF3         // byte value to use as the sync word, defaults to 0x12
 #define PREAMBLE_LENGTH 6      // Supported values are between 6 and 65535.
 #define TX_POWER 20            // TX power in dB, defaults to 17, Supported values are 2 to 20
-#define BAND 868E6             // 433E6 / 868E6 / 915E6
+#define BAND 915E6             // 433E6 / 868E6 / 915E6
 
 ///////////////////////////////////////////////////////////////////////////////
